@@ -1,4 +1,4 @@
-package com.abbeloosindustries.ramen.services.map;
+package com.abbeloosindustries.ramen.map;
 
 import com.abbeloosindustries.ramen.model.Topping;
 import com.abbeloosindustries.ramen.services.ToppingService;

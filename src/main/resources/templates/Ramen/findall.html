@@ -2,11 +2,11 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
-    <title>List of noodles</title>
+    <title>List of Ramen</title>
 </head>
 <body>
 <!--/*@thymesVar id="id" type="com.abbeloosindustries.ramen.model.Broth"*/-->
-<h2 th:text="'List of noodles'">List of noodles</h2>
+<h2 th:text="'List of ramen'">List of ramen</h2>
 
 <table class="table table-striped">
     <thread>
@@ -14,13 +14,21 @@
             <th style="width: 150px;">Id</th>
             <th style="width: 150px;">Name</th>
             <th style="width: 150px;">Quantity</th>
+            <th style="width: 150px;">Broth</th>
+            <th style="width: 150px;">Meat</th>
+            <th style="width: 150px;">Vegetable</th>
+            <th style="width: 150px;">Topping</th>
         </tr>
     </thread>
     <tbody>
-    <tr style="width: 150px;" th:each="noodle : ${noodles}">
-        <td th:text="${noodle.id}">1</td>
-        <td th:text="${noodle.name}">egg</td>
-        <td th:text="${noodle.quantity}">2</td>
+    <tr style="width: 150px;" th:each="ramen : ${allRamen}">
+        <td th:text="${ramen.id}">1</td>
+        <td th:text="${ramen.name}">egg</td>
+        <td th:text="${ramen.quantity}">2</td>
+        <td th:text="${ramen.broth.type}">chicken broth</td>
+        <td th:text="${ramen.meatNoMeat.name}">chicken</td>
+        <td th:text="${ramen.vegetable.name}">slaw</td>
+        <td th:text="${ramen.topping.name}">union</td>
     </tr>
     </tbody>
 </table>

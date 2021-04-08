@@ -1,4 +1,4 @@
-package com.abbeloosindustries.ramen.services.map;
+package com.abbeloosindustries.ramen.map;
 
 import com.abbeloosindustries.ramen.model.Vegetable;
 import com.abbeloosindustries.ramen.services.VegetableService;

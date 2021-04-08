@@ -1,4 +1,4 @@
-package com.abbeloosindustries.ramen.services.springdatajpa;
+package com.abbeloosindustries.ramen.springdatajpa;
 
 import com.abbeloosindustries.ramen.model.Ramen;
 import com.abbeloosindustries.ramen.repositories.RamenRepository;

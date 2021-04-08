@@ -1,4 +1,4 @@
-package com.abbeloosindustries.ramen.services.springdatajpa;
+package com.abbeloosindustries.ramen.springdatajpa;
 
 import com.abbeloosindustries.ramen.model.Vegetable;
 import com.abbeloosindustries.ramen.repositories.VegetableRepository;

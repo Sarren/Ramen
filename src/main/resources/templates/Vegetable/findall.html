@@ -2,11 +2,11 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
-    <title>List of noodles</title>
+    <title>List of vegetables</title>
 </head>
 <body>
 <!--/*@thymesVar id="id" type="com.abbeloosindustries.ramen.model.Broth"*/-->
-<h2 th:text="'List of noodles'">List of noodles</h2>
+<h2 th:text="'List of vegetables'">List of vegetables</h2>
 
 <table class="table table-striped">
     <thread>
@@ -17,10 +17,10 @@
         </tr>
     </thread>
     <tbody>
-    <tr style="width: 150px;" th:each="noodle : ${noodles}">
-        <td th:text="${noodle.id}">1</td>
-        <td th:text="${noodle.name}">egg</td>
-        <td th:text="${noodle.quantity}">2</td>
+    <tr style="width: 150px;" th:each="vegetable : ${vegetables}">
+        <td th:text="${vegetable.id}">1</td>
+        <td th:text="${vegetable.name}">egg</td>
+        <td th:text="${vegetable.quantity}">2</td>
     </tr>
     </tbody>
 </table>

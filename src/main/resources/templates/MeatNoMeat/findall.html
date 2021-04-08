@@ -2,25 +2,25 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
-    <title>List of broths</title>
+    <title>List of meat no meat</title>
 </head>
 <body>
 <!--/*@thymesVar id="id" type="com.abbeloosindustries.ramen.model.Broth"*/-->
-<h2 th:text="'List of broths'">List of broths</h2>
+<h2 th:text="'List of meat no meat'">List of meat no meat</h2>
 
 <table class="table table-striped">
     <thread>
         <tr>
             <th style="width: 150px;">Id</th>
-            <th style="width: 150px;">Type</th>
+            <th style="width: 150px;">Name</th>
             <th style="width: 150px;">Quantity</th>
         </tr>
     </thread>
     <tbody>
-    <tr th:each="broth : ${broths}">
-        <td th:text="${broth.id}">1</td>
-        <td th:text="${broth.type}">Chicken</td>
-        <td th:text="${broth.quantity}">2</td>
+    <tr style="width: 150px;" th:each="meat : ${meats}">
+        <td th:text="${meat.id}">1</td>
+        <td th:text="${meat.name}">pork</td>
+        <td th:text="${meat.quantity}">2</td>
     </tr>
     </tbody>
 </table>

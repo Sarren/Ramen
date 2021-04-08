@@ -20,6 +20,6 @@ public class BrothController {
     @GetMapping("/findall")
     public String findBroths(Model model){
         model.addAttribute("broths", brothService.findAll());
-        return "broth/findAll";
+        return "Broth/findall";
     }
 }
