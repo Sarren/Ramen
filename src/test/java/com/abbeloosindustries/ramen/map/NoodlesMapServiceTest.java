@@ -25,7 +25,7 @@ class NoodlesMapServiceTest {
     }
 
     @Test
-    void findAll() {
+    void test_if_findall_method_returns_set() {
         Set<Noodles> noodlesSet = noodlesMapService.findAll();
         assertEquals(OWNERID, noodlesSet.size());
     }

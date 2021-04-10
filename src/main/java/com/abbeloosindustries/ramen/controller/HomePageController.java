@@ -11,10 +11,10 @@ public class HomePageController {
 
     @GetMapping("/homepage")
     public String homePage(Model model){
-        String text = "Click on order button to select the ramen you would like to order.";
+        //String text = "Click on order button to select the ramen you would like to order.";
         String menu = "Display menu";
-        model.addAttribute("text", text)
-            .addAttribute("menu", menu);
+        model.addAttribute("menu", menu);
+
 
         return "HomePage/index";
     }

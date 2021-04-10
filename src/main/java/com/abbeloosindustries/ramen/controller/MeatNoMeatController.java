@@ -17,8 +17,14 @@ public class MeatNoMeatController {
     }
 
     @GetMapping("/findall")
-    public String findAllMeatNoMeat(Model model){
+    public String meatStock(Model model){
         model.addAttribute("meats", meatNoMeatService.findAll());
         return "MeatNoMeat/findall";
+    }
+
+    @GetMapping("/displaymeat")
+    public String findAllMeatNoMeat(Model model){
+        model.addAttribute("meats", meatNoMeatService.findAll());
+        return "MeatNoMeat/displaymeat";
     }
 }

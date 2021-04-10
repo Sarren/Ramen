@@ -22,10 +22,14 @@ public class Broth extends BaseEntity {
     @Column(name = "Quantity")
     private int quantity;
 
+    @Column(name = "Price")
+    private double price;
+
     @Builder
-    public Broth(Long id, String type, int quantity) {
+    public Broth(Long id, String type, int quantity, double price) {
         super(id);
         this.type = type;
         this.quantity = quantity;
+        this.price = price;
     }
 }

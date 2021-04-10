@@ -34,17 +34,26 @@ public class DataLoader implements CommandLineRunner {
         Broth chickenBroth = new Broth();
         chickenBroth.setQuantity(5);
         chickenBroth.setType("Chicken broth");
+        chickenBroth.setPrice(2.0);
         brothService.save(chickenBroth);
 
         Broth vegiBroth = new Broth();
         vegiBroth.setQuantity(2);
         vegiBroth.setType("Vegitarian Broth");
+        vegiBroth.setPrice(2.0);
         brothService.save(vegiBroth);
 
         MeatNoMeat ribs = new MeatNoMeat();
         ribs.setName("Ribs");
         ribs.setQuantity(3);
+        ribs.setPrice(3.5);
         meatNoMeatService.save(ribs);
+
+        MeatNoMeat tofu = new MeatNoMeat();
+        tofu.setName("Tofu");
+        tofu.setQuantity(7);
+        tofu.setPrice(2.5);
+        meatNoMeatService.save(tofu);
 
         Noodles eggNoodle = new Noodles();
         eggNoodle.setName("Egg noodle");

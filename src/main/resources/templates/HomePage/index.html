@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Ramen</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.6/Bootstrap/css/onepage-wonder.min.css} "/>
 </head>
 <body>
-    <h1 th:text="${menu}">Ramen menu</h1>
-    <h2 th:text="${text}">Some text here</h2>
+    <h1 th:text="${menu}">Configure your favorite ramen</h1>
+    <h2 th:text="${text}">Click the order button to begin</h2>
 
+    <button onClick="location.href='../broth/displaybroths'">Order</button>
 </body>
 </html>

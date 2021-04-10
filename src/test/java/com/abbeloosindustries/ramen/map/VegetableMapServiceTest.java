@@ -25,7 +25,7 @@ class VegetableMapServiceTest {
     }
 
     @Test
-    void findAll() {
+    void test_if_findall_method_returns_set() {
         Set<Vegetable> vegetableSet = vegetableMapService.findAll();
         assertEquals(OWNERID, vegetableSet.size());
     }

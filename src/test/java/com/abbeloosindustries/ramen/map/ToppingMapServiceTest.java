@@ -25,7 +25,7 @@ class ToppingMapServiceTest {
     }
 
     @Test
-    void findAll() {
+    void test_if_findall_method_returns_set() {
         Set<Topping> toppingSet = toppingMapService.findAll();
         assertEquals(OWNERID, toppingSet.size());
     }

@@ -18,8 +18,14 @@ public class BrothController {
     }
 
     @GetMapping("/findall")
-    public String findBroths(Model model){
+    public String brothStock(Model model){
         model.addAttribute("broths", brothService.findAll());
         return "Broth/findall";
+    }
+
+    @GetMapping("/displaybroths")
+    public String findBroths(Model model){
+        model.addAttribute("broths", brothService.findAll());
+        return "Broth/displaybroths";
     }
 }

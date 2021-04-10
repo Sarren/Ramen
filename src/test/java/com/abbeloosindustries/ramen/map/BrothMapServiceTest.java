@@ -25,7 +25,7 @@ class BrothMapServiceTest {
     }
 
     @Test
-    void findAll() {
+    void test_if_findall_method_returns_set() {
         Set<Broth> ownerSet = brothMapService.findAll();
         assertEquals(OWNERID, ownerSet.size());
     }

@@ -26,7 +26,7 @@ class MeatNoMeatMapServiceTest {
     }
 
     @Test
-    void findAll() {
+    void test_if_findall_method_returns_set() {
         Set<MeatNoMeat> meatSet = meatNoMeatMapService.findAll();
         assertEquals(OWNERID, meatSet.size());
     }

@@ -11,16 +11,14 @@
 <table class="table table-striped">
     <thread>
         <tr>
-            <th style="width: 150px;">Id</th>
             <th style="width: 150px;">Name</th>
-            <th style="width: 150px;">Quantity</th>
+            <th style="width: 150px;">Price</th>
         </tr>
     </thread>
     <tbody>
     <tr style="width: 150px;" th:each="meat : ${meats}">
-        <td th:text="${meat.id}">1</td>
         <td th:text="${meat.name}">pork</td>
-        <td th:text="${meat.quantity}">2</td>
+        <td th:text="${meat.price}">2</td>
     </tr>
     </tbody>
 </table>

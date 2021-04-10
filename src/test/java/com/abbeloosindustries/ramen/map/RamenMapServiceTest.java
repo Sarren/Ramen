@@ -26,7 +26,7 @@ class RamenMapServiceTest {
     }
 
     @Test
-    void findAll() {
+    void test_if_findall_method_returns_set() {
         Set<Ramen> ramenSet = ramenMapService.findAll();
         assertEquals(OWNERID, ramenSet.size());
     }
