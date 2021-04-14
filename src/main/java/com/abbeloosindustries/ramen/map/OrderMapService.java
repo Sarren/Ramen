@@ -32,6 +32,6 @@ public class OrderMapService extends AbstractMapService<Order, Long> implements 
 
     @Override
     public Order findById(Long id) {
-        return null;
+        return super.findById(id);
     }
 }

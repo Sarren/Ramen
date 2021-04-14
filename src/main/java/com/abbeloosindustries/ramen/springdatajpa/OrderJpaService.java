@@ -31,12 +31,12 @@ public class OrderJpaService implements OrderService {
 
     @Override
     public Order findById(Long aLong) {
-        return null;
+        return orderRepository.findById(aLong).orElse(null);
     }
 
     @Override
     public Order save(Order object) {
-        return null;
+        return orderRepository.save(object);
     }
 
     @Override

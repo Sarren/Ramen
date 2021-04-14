@@ -70,13 +70,5 @@ public class DataLoader implements CommandLineRunner {
         pakChoy.setQuantity(5);
         vegetableService.save(pakChoy);
 
-        Ramen homeRamen = new Ramen();
-        homeRamen.setBroth(chickenBroth);
-        homeRamen.setQuantity(1);
-        homeRamen.setName("Ramen du chef");
-        homeRamen.setTopping(sesameSeed);
-        homeRamen.setVegetable(pakChoy);
-        homeRamen.setMeatNoMeat(ribs);
-        ramenService.save(homeRamen);
     }
 }

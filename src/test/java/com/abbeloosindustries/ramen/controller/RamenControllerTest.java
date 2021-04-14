@@ -1,5 +1,6 @@
 package com.abbeloosindustries.ramen.controller;
 
+import com.abbeloosindustries.ramen.services.OrderService;
 import com.abbeloosindustries.ramen.services.RamenService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,6 +21,9 @@ class RamenControllerTest {
 
     @Mock
     private RamenService ramenService;
+
+    @Mock
+    private OrderService orderService;
 
     @InjectMocks
     private RamenController ramenController;

@@ -27,4 +27,10 @@ public class OrderMapServiceTest {
         Set<Order> orderSet = orderMapService.findAll();
         assertEquals(orderrId, orderSet.size());
     }
+
+    @Test
+    public void test_if_order_object_is_returned(){
+        Order order = orderMapService.findById(orderrId);
+        assertEquals(orderrId, order.getId());
+    }
 }

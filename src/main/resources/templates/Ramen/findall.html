@@ -6,14 +6,22 @@
 </head>
 <body>
 <!--/*@thymesVar id="id" type="com.abbeloosindustries.ramen.model.Broth"*/-->
-<h2 th:text="'List of ramen'">List of ramen</h2>
+<h2 th:text="'Your order'">List of ramen</h2>
 
 <table class="table table-striped">
     <thread>
         <tr>
-            <th style="width: 150px;">Id</th>
             <th style="width: 150px;">Name</th>
-            <th style="width: 150px;">Quantity</th>
+        </tr>
+    </thread>
+    <tbody>
+    <tr style="width: 150px;" th:each="ordered : ${order}">
+        <td th:text="${ordered.name}">Order</td>
+    </tbody>
+
+    <h3 th:text="'Review order'">List of ramen</h3>
+    <thread>
+        <tr>
             <th style="width: 150px;">Broth</th>
             <th style="width: 150px;">Meat</th>
             <th style="width: 150px;">Vegetable</th>
@@ -22,16 +30,10 @@
     </thread>
     <tbody>
     <tr style="width: 150px;" th:each="ramen : ${allRamen}">
-        <td th:text="${ramen.id}">1</td>
-        <td th:text="${ramen.name}">egg</td>
-        <td th:text="${ramen.quantity}">2</td>
-        <td th:text="${ramen.broth.type}">chicken broth</td>
-        <td th:text="${ramen.meatNoMeat.name}">chicken</td>
-        <td th:text="${ramen.vegetable.name}">slaw</td>
-        <td th:text="${ramen.topping.name}">union</td>
+        <td th:text="${ramen.name}">chicken broth</td>
     </tr>
     </tbody>
 </table>
-
+<button>Pay</button>
 </body>
 </html>
