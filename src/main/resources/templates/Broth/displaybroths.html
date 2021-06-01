@@ -33,21 +33,24 @@
 <!--/*@thymesVar id="id" type="com.abbeloosindustries.ramen.model.Broth"*/-->
 <h2 th:text="'Select your broth'">List of broths</h2>
 
-<table class="table table-striped">
-    <thread>
-        <tr>
-            <th style="width: 150px;">Type</th>
-            <th style="width: 150px;">Price</th>
-        </tr>
-    </thread>
-    <tbody>
-    <tr th:each="broth : ${broths}">
-        <td th:text="${broth.type}">Chicken</td>
-        <td th:text="${broth.price}"></td>
-        <td><button class="button button1" onclick="location.href ='../meatnomeat/displaymeat';createOrder()">+</button></td>
-    </tr>
-    </tbody>
-</table>
+<tbody>
+<div>
+    <form class="ui form" th:action="@{/broth/addBroth}" method="post" th:object="${ramen}">
+    <ul>
+        <li th:each="broth : ${broths}">
+            <div class="ui checkbox">
+                <input type="checkbox" th:field="${ramen.broth}" th:value="${broth.type}">
+                <label th:text="${broth.type}"></label>
+            </div>
+        </li>
+    </ul>
+        <div>
+            <button type="submit">Confirm</button>
+        </div>
 
-</body>
+</form>
+    <!-- <td><button class="button button1" onclick="location.href ='../meatnomeat/displaymeat';">Confirm</button></td> -->
+</div>
+
+</tbody>
 </html>

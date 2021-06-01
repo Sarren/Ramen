@@ -13,16 +13,12 @@ import javax.persistence.Table;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "Broth")
 public class Broth extends BaseEntity {
 
-    @Column(name = "Type")
     private String type;
 
-    @Column(name = "Quantity")
     private int quantity;
 
-    @Column(name = "Price")
     private double price;
 
     @Builder

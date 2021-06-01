@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -21,7 +22,15 @@ public class BrothSpringDataJpaService implements BrothService {
 
     @Override
     public Broth findBrothByType(String type) {
-        return brothRepository.findBrothByType(type);
+        Broth foundBroth = new Broth();
+        foundBroth.setType("test");
+        Iterable<Broth> brothSet = brothRepository.findAll();
+        for (Broth broth : brothSet) {
+            if (broth.getType().equalsIgnoreCase(type)){
+                foundBroth = broth;
+            }
+        }
+        return foundBroth ;
     }
 
     @Override
@@ -33,7 +42,8 @@ public class BrothSpringDataJpaService implements BrothService {
 
     @Override
     public Broth findById(Long aLong) {
-        return null;
+        Optional<Broth> broth = brothRepository.findById(aLong);
+        return broth.orElse(new Broth());
     }
 
     @Override
